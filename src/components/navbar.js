@@ -1,5 +1,6 @@
 import React from 'react';
 import favicon from './favicon.png';
+
 function Navbar() {
     return (
     <div className="Navbar">
