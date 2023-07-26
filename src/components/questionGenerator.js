@@ -1,5 +1,5 @@
 import React from 'react';
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 
 function QuestionGenerator() { {/* 1 */} {/* 8 - React recalls QuestionGenerator to get updated JSX */}
     const [question, setQuestion] = useState("2+2"); {/* 2 */} {/* 3 - QuestionGenerator, your code, binds that initial value ("2+2") to the local variable question, 
