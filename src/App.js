@@ -4,6 +4,7 @@ import './App.css';
 import Navbar from './components/navbar';
 import QuestionGenerator from './components/questionGenerator';
 import Grid from './components/grid';
+import Sounds from './components/sounds';
 
 
 function App() {
@@ -21,10 +22,9 @@ function App() {
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <QuestionGenerator />
-      </header>
-      <body className="App-body">
         <Grid />
-      </body>
+        <Sounds />
+      </header>
     </div>
   );
 }
