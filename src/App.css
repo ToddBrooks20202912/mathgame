@@ -7,6 +7,11 @@
   pointer-events: none;
 }
 
+.App-Logo-Container {
+  background-color: #282c34;
+  display: block;
+}
+
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
@@ -31,4 +36,21 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.digit {
+  flex:33%;
+  display:grid;
+  margin:5px;
+  place-items: centre;
+  color: white;
+  border: 1px solid gray;
+  height:100%;
+}
+
+.numRow {
+  flex:33%;
+  display:flex;
+  flex-direction:row;
+  margin:5px;
 }
