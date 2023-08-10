@@ -5,10 +5,10 @@ import Digit from "./digit";
 
 function Grid() {
     const [] = useState();
-    return(
+    return (
         <div className="gridParent"> {/* After this, the grid's individual rows are checked */}
             <div className="numRow">
-                <Digit position={0} value={0}/> 
+                <Digit position={0} value={0}/> {/* Arrays start at 0, value is 0 as that's the row number*/}
                 <Digit position={1} value={0}/> 
                 <Digit position={2} value={0}/> 
                 <Digit position={3} value={0}/> 

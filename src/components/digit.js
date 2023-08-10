@@ -6,7 +6,7 @@ function Digit({position, value}) {
     const {grid} = useContext(AppContext);
     const num = grid[value][position];
     return (
-        <div className='digit'> {num}</div>
+        <div className='digit'>{num}</div>
     );
 }
 

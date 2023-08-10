@@ -3,6 +3,8 @@
 }
 
 .App-logo {
+  margin-top: 5vmin;
+  margin-bottom: 5vmin;
   height: 20vmin;
   pointer-events: none;
 }
@@ -53,4 +55,29 @@
   display:flex;
   flex-direction:row;
   margin:5px;
+}
+
+.Numpad {
+  width:24vw;
+	margin:50px auto;
+	border:1px solid #333;
+	border-radius:0px;
+	background:#eee;
+}
+
+.Numpad .padRow {
+  width: 100%;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+}
+
+.Numpad .numKey {
+  background-color: #282c34;
+	box-sizing: border-box;
+	width: 30%;
+	margin: .7% 1.65%;
+	height: 16.67%;
+	font-size: 3em;
+	font-family: monospace;
 }

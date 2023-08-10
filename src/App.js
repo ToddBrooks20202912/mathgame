@@ -1,4 +1,4 @@
-import logo from './logo.svg';
+import logo from './components/favicon.png';
 import 'bootstrap/dist/css/bootstrap.css';
 import './App.css';
 import Navbar from './components/navbar';
@@ -8,6 +8,7 @@ import Sounds from './components/sounds';
 import {createContext} from 'react';
 import {useState} from 'react';
 import {gridReset} from "./Questions";
+import Numpad from "./components/numpad";
 
 export const AppContext = createContext();
 
@@ -24,15 +25,17 @@ function App() {
       <Navbar />
       </div>
       <div className='App-Logo-Container'>
-      <img src={logo} className="App-logo" alt="logo" />
+        <img src={logo} className="App-logo" alt="logo" />
       </div>
       <header className="App-header">
         
-        <AppContext.Provider value={{grid, setGrid}}> {/* Push state using Context  */}
+        <AppContext.Provider value={{grid, setGrid}}> {/* Push state using Context, allows components down the line to access state functions */}
           <QuestionGenerator /> {/* The question is generated via the QuestionGenerator file */}
           <Grid /> {/* Display the grid. */}
         </AppContext.Provider> 
+        <Numpad />
         <Sounds />
+        
       </header>
     </div>
   );
