@@ -4,7 +4,6 @@ import favicon from './favicon.png';
 function Navbar() {
     return (
     <div className="Navbar">
-      <header className="App-header">
       <nav className="navbar navbar-dark navbar-expand bg-dark">
         <div className="container-fluid">
           <a className="navbar-brand" href="/#"><img src={favicon} width="40" height="40" alt="27"></img></a>
@@ -18,7 +17,6 @@ function Navbar() {
           </div>
         </div>
       </nav>
-      </header>
     </div>
     );
 }
