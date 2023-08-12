@@ -91,6 +91,7 @@
 	font-size: 2em;
 	font-family: monospace;
   white-space: normal;
+  cursor: pointer;
 }
 
 .gridParent {
