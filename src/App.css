@@ -41,43 +41,61 @@
 }
 
 .digit {
-  flex:33%;
-  display:grid;
-  margin:5px;
-  place-items: centre;
+  flex: 33%;
+  height: 100%;
+  border: 1px solid grey;
+  margin: 5px;
+  display: grid;
+  place-items: center;
+  font-size: 30px;
+  font-weight: bolder;
   color: white;
-  border: 1px solid gray;
-  height:100%;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 .numRow {
-  flex:33%;
-  display:flex;
-  flex-direction:row;
-  margin:5px;
+  flex: 33%;
+  display: flex;
+  flex-direction: row;
+  margin: 5px;
 }
-
 .Numpad {
-  width:24vw;
+  width:50vw;
 	margin:50px auto;
 	border:1px solid #333;
 	border-radius:0px;
 	background:#eee;
+  
 }
-
 .Numpad .padRow {
   width: 100%;
 	display: flex;
 	flex-direction: row;
 	flex-wrap: wrap;
+  
 }
-
+.Numpad #twoKey {
+  background-color: #282a2e;
+	box-sizing: border-box;
+	width: 46%;
+	margin: .7% 1.65%;
+	font-size: 2em;
+	font-family: monospace;
+  white-space: normal;
+}
 .Numpad .numKey {
-  background-color: #282c34;
+  background-color: #282a2e;
 	box-sizing: border-box;
 	width: 30%;
 	margin: .7% 1.65%;
-	height: 16.67%;
-	font-size: 3em;
+	font-size: 2em;
 	font-family: monospace;
+  white-space: normal;
+}
+
+.gridParent {
+  margin: 100px;
+  height: 550px;
+  display: flex;
+  flex-direction: column;
 }
