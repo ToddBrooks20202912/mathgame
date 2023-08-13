@@ -9,6 +9,11 @@
   pointer-events: none;
 }
 
+#navbarNav {
+  flex-direction: column;
+  font-size: larger;
+}
+
 .App-Logo-Container {
   background-color: #282c34;
   display: block;
@@ -60,7 +65,7 @@
   margin: 5px;
 }
 .Numpad {
-  width:50vw;
+  width:50vmin;
 	margin:50px auto;
 	border:1px solid #333;
 	border-radius:0px;
@@ -99,4 +104,24 @@
   height: 550px;
   display: flex;
   flex-direction: column;
+}
+
+#incorrect {
+  background-color: rgb(172, 53, 53);
+}
+
+#correct {
+  background-color: rgb(32, 102, 32);
+}
+
+#numInQuest {
+  background-color: rgb(141, 141, 45)
+}
+
+#answerText {
+  padding-top: 100px;
+}
+
+.EndGame {
+  margin-bottom: 100px;
 }
