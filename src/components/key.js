@@ -3,13 +3,27 @@ import { useContext } from "react";
 import { AppContext } from "../App";
 
 function Key({keyMap, twoKey}) {
-    const {grid, setGrid, attemptPos, setPos} = useContext(AppContext);
+    const {grid, setGrid, attemptPos, setPos, question, setgameStatus} = useContext(AppContext);
     const selectNum = () => {
-        if (keyMap == "ENT") {
-            if (attemptPos.keyPos != 5) return;
+        if (keyMap === "ENT") {
+            if (attemptPos.keyPos !== 5) return;
+            let userQuestion = "";
+            for (let i = 0; i < 5; i++) {
+                userQuestion += grid[attemptPos.rowPos][i]
+            }
+
+            if (question === userQuestion){
+                setgameStatus({gameEnded: true, correctlyGuessed: true})
+            }
+
             setPos({rowPos: attemptPos.rowPos + 1, keyPos: 0}) // move to the next row
-        } else if (keyMap == "DEL") {
-            if (attemptPos.keyPos == 0) return;
+
+            if (attemptPos.rowPos === 4 && attemptPos.keyPos === 5) {
+                setgameStatus({gameEnded: true, correctlyGuessed: false})
+            }
+
+        } else if (keyMap === "DEL") {
+            if (attemptPos.keyPos === 0) return;
             const statusGrid = [...grid]; // current board at this moment
             statusGrid[attemptPos.rowPos][attemptPos.keyPos] = ""; // deleting/clearing the key stored at this position
             setGrid(statusGrid); // push new grid 
