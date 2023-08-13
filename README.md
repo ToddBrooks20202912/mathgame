@@ -6,7 +6,7 @@ A project bootstrapped with Create-React-App
 
 To begin the Application, I recommend running 
 
-### 'npm install' 
+### `npm install`
 
 within the directory, as this will install all relevant and neccesary dependencies. 
 
