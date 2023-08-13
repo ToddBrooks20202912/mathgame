@@ -5,6 +5,7 @@ import { AppContext } from "../App";
 function Key({keyMap, twoKey}) {
     const {grid, setGrid, attemptPos, setPos, question, setgameStatus} = useContext(AppContext);
     const selectNum = () => {
+        console.log(question);
         if (keyMap === "ENT") {
             if (attemptPos.keyPos !== 5) return;
             let userQuestion = "";
@@ -18,7 +19,10 @@ function Key({keyMap, twoKey}) {
 
             setPos({rowPos: attemptPos.rowPos + 1, keyPos: 0}) // move to the next row
 
-            if (attemptPos.rowPos === 4 && attemptPos.keyPos === 5) {
+            if (attemptPos.rowPos === 4 && attemptPos.keyPos === 5 && question != userQuestion) {
+                if (question === userQuestion) {
+                    setgameStatus({gameEnded: true, correctlyGuessed: true})
+                }
                 setgameStatus({gameEnded: true, correctlyGuessed: false})
             }
 
